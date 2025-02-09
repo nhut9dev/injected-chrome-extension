@@ -1,13 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
 import App from './App.jsx';
 
+const extensionId = 'injected-extension-root';
+
 const root = document.createElement('div');
-root.id = 'my-extension-root';
+root.id = extensionId;
 document.body.appendChild(root);
 
-createRoot(document.getElementById('my-extension-root')).render(
+createRoot(document.getElementById(extensionId)).render(
 	<StrictMode>
 		<App />
 	</StrictMode>
